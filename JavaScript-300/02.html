@@ -1,1 +1,22 @@
-
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>让页面前进后退</title>
+	</head>
+	<body>
+		<a href="01.html">1.html</a>
+		<input type="button" value="前进" onclick="goForward()" />
+		<input type="button" value="后退" onclick="goBack()" />
+	</body>
+	<script type="text/javascript">
+		function goForward()
+		{
+			window.history.forward();
+		}
+		function goBack()
+		{
+			window.history.back();
+		}
+	</script>
+</html>
