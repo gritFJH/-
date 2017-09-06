@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>若干秒后不操作自动关闭页面</title>
+	</head>
+	<body style="text-align: center;" onclick="clickBody()">
+		如果十秒之不点击，窗口将会关闭。。
+	</body>
+	<script type="text/javascript">
+		var willClose = true;
+		function clickBody()
+		{
+			willClose = false; //全局变量
+		}
+		setInterval(
+			function()
+			{
+				if(willClose)
+				{
+					window.close();
+				}
+				else
+				{
+					willClose = true;//重新进行计时
+				}
+			},10000
+		);
+		
+	</script>
+</html>
