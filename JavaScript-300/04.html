@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>页面载入等待界面</title>
+	</head>
+	<body>
+          <!--友好提示的层 -->
+		<div id="doing" style="Z_INDEX:99;left: 0; top: 0; display: none;width: 100%;position: absolute;height: 100%; background: gray;">
+			<br><br><br>载入中，请等待。。。。
+		</div>
+		<p>
+			<input type="button" value="提交表单" onclick="submitForm()" />
+		</p>
+	</body>
+	<script type="text/javascript">
+		function submitForm() /*提交表单的动作*/
+		{
+			var doing = document.getElementById('doing')
+			doing.style.display=''; /*取消隐藏*/
+			self.location.reload();  /*重新加载页面模拟表单的提交*/
+		}
+		
+	</script>
+</html>
