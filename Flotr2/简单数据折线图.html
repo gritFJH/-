@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			#chart{
+				position: absolute;
+				margin: 50px auto;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="chart" style="width: 600px;height: 300px;"> 
+			
+		</div>
+		<script type="text/javascript" src="js/flotr2.min.js"></script>
+		<script type="text/javascript">
+			window.onload = function(){
+				var co2 = [
+				[1959,315.97],
+				[1960,316.91],
+				[1961,317.64],
+				[1962,318.45]
+			];
+			var temp = [
+				[1959,0.0776],
+				[1960,0.0280],
+				[1961,0.1028],
+				[1962,0.1289]
+			];
+			Flotr.draw(
+				document.getElementById("chart"),
+				[
+					{                                  /*添加CO2*/
+						data:co2,                  
+						lines:{show:true}
+					},
+					{                                  /*添加温度*/
+						data:temp,
+						lines:{show:true},
+						yaxis:2
+					}
+				]
+			);
+			
+			
+		}
+			
+		</script>
+	</body>
+</html>
