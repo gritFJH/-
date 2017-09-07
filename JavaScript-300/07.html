@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>修改网页标题</title>
+	</head>
+	 <body style="text-align: center;">
+	 	<p>
+	 		<input type="text"  id="newTitle" value="" />
+	 		<input type="button" value="修改标题" onclick="changeTitle()" />
+	 	</p>
+	</body>
+	
+	<script type="text/javascript">
+		function changeTitle()
+		{
+			var newTitle = document.getElementById('newTitle').value;
+			document.title = newTitle;//使用document对象修改标题
+		}
+	</script>
+</html>
