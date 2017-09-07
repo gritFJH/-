@@ -44,16 +44,17 @@
 						data:temp,
 						lines:{show:true},
 						yaxis:2
-					},
-					{
-						grid:{                          
-								horizontalLines:false,
-								verticalLines:false
-						},
-						yaxis:{min:300,max:400},
-						xaxis:{min:-0.15,max:0.69}
 					}
-				]
+				],
+				{										
+					grid:{                          
+							horizontalLines:false,  /*水平线*/
+							verticalLines:false    /*垂线*/
+					},
+					yaxis:{min:300,max:400},
+					y2axis:{min:-0.15,max:0.69}
+				}
+				
 			);
 			
 			
@@ -72,3 +73,4 @@
 		</script>
 	</body>
 </html>
+
