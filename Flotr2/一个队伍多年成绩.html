@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			#chart{
+				position: absolute;
+				margin:20px auto ;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="chart" style="width: 600px;height: 300px;"> 
+			
+		</div>
+		<script type="text/javascript" src="js/flotr2.min.js"></script>
+		<script type="text/javascript">
+			var wins = [[[0,11],[1,11],[2,15],[3,15],[4,18],[5,21],[6,28]]];
+			var years = [
+			[0,"2006"],
+			[1,"2007"],
+			[2,"2008"],
+			[3,"2009"],
+			[4,"2010"],
+			[5,"2011"],
+			[6,"2012"]
+			];
+			window.onload = function()
+			{
+				Flotr.draw(
+					
+					document.getElementById("chart"),
+					wins,
+					{
+						title:"First chart - 柱状图",
+					    colors:["#89AFD2"],
+						bars:{
+							show:true,
+							barWidth:0.5,
+							fillOpacity:1,
+							lineWidth:0
+						},
+						yaxis:{                     //调整Y轴
+							min:0,						//最小值为0
+							tickDecimals:0             //精度是小数点后几位
+						},
+						xaxis:{                   /*X轴设置*/
+							ticks:years          /*将years传递到*/
+						},
+						grid:{
+							horizontalLines:false,
+							verticalLines:false
+						}
+					
+					}				
+				);
+			}
+		</script>
+	</body>
+</html>
