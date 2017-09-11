@@ -1,0 +1,59 @@
+<!-- 
+<!DOCTYPE html>
+<html>
+<head>
+	<title>DOM操作实例</title>
+	</head>
+<body>
+	<input type="checkbox" id="all" onclick="selectAll()">全选
+	<hr>
+	<input type="checkbox" />电脑<br/>
+	<input type="checkbox"/>手机<br/>
+	<input type="checkbox"/>空调<br/>
+
+</body>
+	<script>
+	var oCheckbox = document.getElementsByTagName("input");
+	function selectAll()
+	{
+		for (var i = 1; i < oCheckbox.length; i++) 
+		{
+			oCheckbox[i].checked = oCheckbox[0].checked;
+		}
+	}
+	</script>
+</html>
+ 原理：利用getElementsByTagName()函数选中所有input标签为一个对象，在全选项上设置点击函数，选中全选（为获取到对象的第一项[0]）,其他checkbox的checked属性都设置成checked -->
+	<!-- 此方案具有局限性，只能在input标签较少情况下，而且input标签不一定全是checked 
+
+ -->
+ <!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<input type="checkbox" id="all" onclick="selectAll()">全选
+	<hr>
+	<input type="checkbox" name="product" />电脑<br/>
+	<input type="checkbox" name="product"/>手机<br/>
+	<input type="checkbox" name="product"/>空调<br/>
+</body>
+<script>
+function selectAll()
+{
+	var dom = document.getElementById("all");
+	var doms = document.getElementsByName("product");
+	for (var i = 0; i < doms.length; i++) 
+		{
+			doms[i].checked = dom.checked;
+		}
+}
+</script>
+</html>
+<!-- 
+	document.getElementsByName()    是根据//控件名称//获取这个控件对象，因为控件名称可以相同，返回的是一个对象数组。 
+	document.getElementById()       是根据//控件ID//获取这个控件对象，因为控件ID唯一，返回的是一个对象。 
+	document.getElementsByTagName() 是根据//控件TAG//获取这个控件对象，返回的是一个对象数组。
+	document.all
+ -->
