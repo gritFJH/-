@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>奇偶行变色表格，文字居中</title>
+	<style>
+		.even{
+			background-color: #84df96;
+			text-align: center;
+		}
+		.odd{
+			background-color: #77ac98;
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+<div class="demo-info">
+	<div class="demo-tip icon-tip"></div>
+	<div>Hello World</div>
+</div>
+<div style="margin:10px 0;"></div>
+	<table id="t1" style="width:500px;height:auto;">
+		<thead>
+			<tr style="background-color:#00ae9d">
+				<th>Item ID</th>
+				<th>Product</th>
+				<th>List Price</th>
+				<th>Attribute</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>EST-1</td>
+				<td>FI-SW-01</td>
+				<td>32</td>
+				<td>68</td>
+			</tr>
+			<tr>
+				<td>EST-10</td>
+				<td>FI-SW-01</td>
+				<td>45</td>
+				<td>78</td>
+			</tr>
+			<tr>
+				<td>EST-11</td>
+				<td>FI-SW-01</td>
+				<td>35</td>
+				<td>789</td>
+			</tr>
+			<tr>
+				<td>EST-12</td>
+				<td>FI-SW-01</td>
+				<td>85</td>
+				<td>78</td>
+			</tr>
+			<tr>
+				<td>EST-13</td>
+				<td>FI-SW-01</td>
+				<td>456</td>
+				<td>456</td>
+			</tr>
+		</tbody>
+	</table>
+</body>
+<script>
+//通过ID选择器获取当前想要的表格
+	
+	window.onload = function init()
+	{
+		var tab = document.getElementById("t1");
+		var otbody = tab.getElementsByTagName("tbody")[0];
+		var otr = otbody.getElementsByTagName("tr");
+		
+		for (var i=0; i < otr.length; i++) 
+			{
+				if (i%2==0)
+				{
+
+					otr[i].className = "even";
+						//调用css中类选择器名称，将这类标签设置上类名
+						//相当于逆用css类选择器
+				}
+				else
+				{
+					otr[i].className = "odd";
+					//调用css中类选择器名称
+					//相当于逆用css类选择器
+				}			
+				 	
+			}
+	}
+</script>
+</html>
