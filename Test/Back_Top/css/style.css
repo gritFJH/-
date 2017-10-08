@@ -1,0 +1,21 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+.box{/*放图片的盒子*/
+	width: 1000px;
+	margin:0px auto;
+}
+
+.btn{/*回到顶部链接按钮*/
+	width: 40px;
+	height: 80px;
+	position: fixed;/*固定布局*/
+	bottom: 30px;
+	background: red;
+	left: 50%;/*中间部分*/
+	margin-left: 540px;/*中间部分+500px*/
+}
+.btn:hover{/*鼠标经过颜色变为绿色*/
+	background: green;
+}
