@@ -6,13 +6,103 @@
 		<meta name="viewport" content="width=device-width,initial-scale=1"/>
 		<title>按钮式下拉菜单</title>
 		<link rel="stylesheet" type="text/css" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
-		<script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-      	<script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+		
 	</head>
 	<body>
-		
+		<div class="container">
+			
+			
+			
+			
+			
+			
+			
+			
+			单按钮下拉菜单
+			<div class="btn-group"><!--单按钮下拉菜单-->
+				<button type="button" class="btn btn-info dropdown-toggle btn-lg" data-toggle="dropdown">
+					下拉菜单
+					<span class="caret"></span>
+				</button>
+				<ul class="dropdown-menu">
+					<li><a href="#">第一个</a></li>
+					<li><a href="#">第二个</a></li>
+					<li><a href="#">第三个</a></li>
+				</ul>
+			</div>
+			<!--
+			
+			单个的按钮改变大小使用btn-lg、不填（正常）、btn-sm、btn-xs四种尺寸
+			按钮组的大小改变使用btn-group-lg、不填（正常）、btn-group-sm、btn-group-xs四种尺寸
+			
+			-->
+			
+			
+			
+			
+			
+			
+			
+			
+			<hr />分裂式下拉菜单
+			<div class="btn-group"><!--分裂式下拉菜单，两个按钮组成，左边按钮有文字，右半个没有-->
+				<button type="button" class="btn btn-info " >
+				<!--左半个按钮不需要添加全面的圆角效果，而且不需要点击左半个按钮，因此将dropdown-toggle和data-toggle="dropdown"去掉即可-->
+					下拉菜单
+				</button>
+				<button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown">
+					<span class="caret"></span> 
+				</button>
+				<ul class="dropdown-menu">
+					<li><a href="#">第一个</a></li>
+					<li><a href="#">第二个</a></li>
+					<li><a href="#">第三个</a></li>
+				</ul>
+			</div>
+			
+			
+			
+			<hr />向上弹出单按钮菜单
+			<div class="btn-group dropup"><!--单按钮向上弹出菜单-->
+				<button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown">
+					向上弹出单按钮菜单
+					<span class="caret"></span>
+				</button>
+				<ul class="dropdown-menu">
+					<li><a href="#">第一个</a></li>
+					<li><a href="#">第二个</a></li>
+					<li><a href="#">第三个</a></li>
+				</ul>
+			</div>
+			
+			
+			
+			
+			<hr />分裂式向上弹出菜单
+			<div class="btn-group dropup"><!--分裂式下拉菜单，两个按钮组成，左边按钮有文字，右半个没有-->
+				<button type="button" class="btn btn-info " >
+				<!--左半个按钮不需要添加全面的圆角效果，而且不需要点击左半个按钮，因此将dropdown-toggle和data-toggle="dropdown"去掉即可-->
+					分裂式向上弹出菜单
+				</button>
+				<button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown">
+					<span class="caret"></span> 
+				</button>
+				<ul class="dropdown-menu">
+					<li><a href="#">第一个</a></li>
+					<li><a href="#">第二个</a></li>
+					<li><a href="#">第三个</a></li>
+				</ul>
+			</div>
+			
+			
+			
+			
+		</div>
+	
+	
+	
+	
 		<script src="js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
 		<script src="js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
-		
 	</body>
 </html>
